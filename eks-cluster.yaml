@@ -1,0 +1,16 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: test-cluster-7
+  region: us-east-1
+nodeGroups:
+- name: test5-ng
+  amiFamily: AmazonLinux2023
+  instanceType: t2.small
+  availabilityZones:
+  - us-east-1a
+  - us-east-1b
+  desiredCapacity: 1
+  minSize: 1
+  maxSize: 3
+  volumeSize: 20
