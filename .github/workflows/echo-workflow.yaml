@@ -1,0 +1,12 @@
+name: my-test-gh-workflow
+run-name: ${{ github.actor }} is running GH Workflow
+on:
+  push:
+    branches:
+      - "main"
+jobs:
+  echo-kernel:
+    runs-on: ubuntu-latest
+    steps:
+      - run: uname -r
+      - run: echo "Hello Ubuntu"
